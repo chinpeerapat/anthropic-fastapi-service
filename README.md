@@ -4,13 +4,11 @@ This is a FastAPI service that provides a RESTful API for the
 Anthropic Claude AI model using [anthropic-sdk-python](https://https://github.com/anthropics/anthropic-sdk-python). For more information on the model, please refer to the [Anthropic Claude AI model](https://docs.anthropic.com/claude/reference)
 
 ## Documentation
-----------------
 The API documentation can be found at [http://localhost:8000/docs](http://localhost:8080/docs)
 
 ## Running the Project
 
 ### Running the Project Locally
----------------
 1. Clone the repository
 ```bash
 git clone https://github.com/furkankyildirim/anthropic-fastapi-service.git
@@ -42,7 +40,6 @@ chmod +x runner.sh
 ```
 
 ### Running the Project with Docker
----------------
 1. Clone the repository
 ```bash
 git clone https://github.com/furkankyildirim/anthropic-fastapi-service.git 
