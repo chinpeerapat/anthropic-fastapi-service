@@ -1,0 +1,26 @@
+# Test your FastAPI endpoints
+### Create Message using Anthropic
+POST http://localhost:8000/message
+Content-Type: application/json
+
+{
+  "text": "Hello!"
+}
+
+### Create Message using Anthropic (Detailed)
+POST http://localhost:8000/message/detailed
+Content-Type: application/json
+
+{
+  "text": "Hello!"
+}
+
+
+### Stream Message using Anthropic
+POST http://localhost:8000/stream
+Content-Type: application/json
+
+{
+  "text": "Hello!"
+}
+
