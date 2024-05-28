@@ -40,7 +40,6 @@ class AnthropicClient:
         model = model or ServiceCallerConfig.Anthropic.MODEL
         message = await self.anthropic.messages.create(model=model, max_tokens=max_tokens, temperature=temperature,
                                                        system=system, messages=messages)
-        print(message)
         return MessageResponseValidation(**message.model_dump())
 
     async def create_stream(self, messages: [MessageRequestValidation], system: str,

@@ -1,4 +1,6 @@
-from pydantic import BaseModel, Field
+import json
+
+from pydantic import BaseModel, Field, model_validator
 from .message import MessageRequestValidation, MessageResponseValidation
 from ..constants import AnthropicConstant
 
@@ -13,6 +15,11 @@ class RequestValidation(BaseModel):
                                       description='The sampling temperature.')
     model: AnthropicConstant.Model | None = Field(AnthropicConstant.Model.CLAUDE_3_OPUS_20240229,
                                                   title='Model', description='The model name.')
+
+    @model_validator(mode="before")
+    @classmethod
+    def to_py_dict(cls, data):
+        return json.loads(data)
 
 
 class ResponseValidation(MessageResponseValidation):
